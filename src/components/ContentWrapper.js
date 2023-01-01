@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 
 const ContentWrapper = () => {
   return (
@@ -8,4 +8,4 @@ const ContentWrapper = () => {
   )
 }
 
-export default ContentWrapper
+export default ContentWrapper */
