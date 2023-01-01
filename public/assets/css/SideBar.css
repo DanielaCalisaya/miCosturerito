@@ -8,23 +8,45 @@
 
 }
 .bar__container__logo {
+    width: 2.3rem;
+    height: 2.3rem;
+}
+.logo img {
+    border-radius: 50%;
+    
+}
+.bar__container__menu__btn {
+    border: 0;
+    /* padding: 0.5rem; */
+    cursor: pointer;
+    outline: thin solid var(--first-color);
+    background-color: var(--second-color);  
+}
+.bar__container__menu__btn svg {
+    fill: var(--first-color);
+}
+.bar__container__menu {
+    background-color: red;
+    position: fixed;/* Al tener una posicion fixed pierde sus propiedades de ancho y alto */
+    left: 0;
+    bottom: var(--header-height);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;/* si activamos o no la reacción a interactividad, porque por mas que la opacidad sea 0, al pasar sobre el elemento se ve la manito */
+    /* opacity: 0; */
+    transition: opacity 0.5s ease; 
+}
 
+.bar__container__menu a {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
 }
 /* desktop
     width: 12rem;
     height: 100vh;
 */
-.logo {
-    border-radius: 50%;
-}
-
-.bar__container__menu__btn {
-    border: 0;
-    cursor: pointer;
-    outline: thin solid var(--first-color);
-    background-color: var(--second-color);  
-}
-
-.bar__container__menu__btn svg {
-    fill: var(--first-color);
-}

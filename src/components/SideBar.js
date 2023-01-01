@@ -5,8 +5,8 @@ const SideBar = () => {
     <header className="bar">
         <section className="bar__container">
             <div className="bar__container__logo">
-                <a href="/" className="">  
-                  <img className="logo" src="assets/images/logo.png" alt="Seams with LOVE"/>
+                <a href="/" className="logo">  
+                  <img src="assets/images/logo.png" alt="Seams with LOVE"/>
                 </a>
             </div>
             <button className="bar__container__menu__btn">
