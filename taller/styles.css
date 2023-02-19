@@ -1,0 +1,12 @@
+:root {
+    --first-color: #e1bcfe;
+    --second-color: #3a3b45;
+    --black-color: #000;
+    --white-color: #fff;
+    --link-color: #438ccc;
+    --white-alpha-color: rgba(255, 255, 255, 0.5);
+    --black-alpha-color: rgba(0, 0, 0, 0.5);
+    --font: 'Zen Antique', serif;
+    --max-width: 1200px;
+    --header-height: 4rem;
+}
