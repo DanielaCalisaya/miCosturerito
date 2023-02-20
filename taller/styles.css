@@ -1,3 +1,4 @@
+/* ----------Custom Properties---------- */
 :root {
     --first-color: #e1bcfe;
     --second-color: #3a3b45;
@@ -9,4 +10,73 @@
     --font: 'Zen Antique', serif;
     --max-width: 1200px;
     --header-height: 4rem;
+}
+
+html {
+    box-sizing: border-box; /* El tamaño de la caja irá desde el borde no desde el contenido */ 
+    font-family: var(--font);
+    font-size: 16px;
+    scroll-behavior: smooth; /* Para el efecto de transición que hay en el header, solo con css */
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit; /* Que hereden el tamaño de caja, es decir del html */
+}
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden; /* Con lo que desborda el contenedor, en x(horizontal) que oculte y evita la barra de desplazamiento */
+    color: var(--second-color);
+    background-color: var(--firts-color);
+    max-width: 1440px; 
+}
+
+a {
+    color: var(--link-color);
+    transition: all 0.5s ease-out;
+}
+
+a:hover {
+    opacity: 0.75;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+h5 {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+h6 {
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p { 
+    line-height: 1.6; /* Espacio interlineado */
 }
