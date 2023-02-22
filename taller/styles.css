@@ -123,3 +123,26 @@ p {
     color: var(--first-color);
     background-color: var(--second-color);
 } */
+
+/* ----------Header - Media query---------- */
+@media screen and (min-width: 1024px) {
+    .header__container__menu__btn {
+        display: none;
+    }
+    .header__container__menu {
+        position: static; /* vuelve a su valor normal */
+        width: auto; /* se adapte al ancho que tengan los enlaces */
+        flex-direction: row;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .header__container__menu a {
+        padding: 0 1rem;
+    }
+    .header__container__menu a:last-child {
+        padding-right: 0;
+      }
+    .header__container__menu a:hover {
+        background-color: transparent;
+    }
+}
