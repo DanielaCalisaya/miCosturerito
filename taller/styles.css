@@ -238,3 +238,26 @@ p {
 .hero__image--title-h2 {
     font-size: 2.5vw;
 }
+
+/* ----------About---------- */
+.about-article { 
+    text-align: center;
+}
+
+/* ----------About - Media query---------- */
+@media screen and (min-width: 1024px) {
+
+    .about { /* en desktop tiene 2 columnas las section acerca */
+        display: grid;
+        grid-template-columns: repeat(2, 45%);/* se repite 2 veces al 45%, sobra 10%, eso será para el espacio entre si */
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    .full-lg-screen { 
+        width: 100%; 
+        min-height: 100vh;
+        /* background-color: var(--first-color); */
+    } 
+   
+}
