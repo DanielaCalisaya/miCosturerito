@@ -73,7 +73,7 @@ h6 {
 }
 
 img {
-    max-width: 100%;
+    max-width: 100%; 
     height: auto;
 }
 
@@ -205,4 +205,36 @@ p {
 
 .section {
     padding: 2rem 1rem;
+}
+
+/* ----------Hero image---------- */
+.hero__image {
+    background-image: var(--hero-image); 
+    /* la variable image no está en root, sino que se crea en el atributo styles que se le paso al contenedor article, y solo se define alli */
+    background-repeat: no-repeat;
+    background-size: cover;  /* se adapte a la altura de manera proporcional del contenedor */
+    background-position: center;  
+    /* background-attachment: var(--hero-attachment); */ /* si tuviera scroll se desplazará junto con el contenido */
+}
+
+.hero__image--opacity {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--hero-opacity-color); /* probar la opacidad del second-color */
+}
+
+.hero__image--content {
+    color: var(--first-color); 
+}
+
+.hero__image--title {
+    font-size: 7.5vw; /* Fluid web design (en este caso con estas medidas no necesitaremos mas media querys para el title) */
+}
+
+.hero__image--title-h2 {
+    font-size: 2.5vw;
 }
