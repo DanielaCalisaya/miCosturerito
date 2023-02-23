@@ -82,16 +82,47 @@ p {
 }
 
 /* ----------Header---------- */
+.header {
+    position: fixed; /* estará fijo */
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: var(--header-height);
+    padding: 1rem;
+    background-color: var(--second-color);
+}
+
+.header__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--max-width);
+}
+
+.header > .header__container { /* header container que es el hijo directo, por eso el mayor que */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container__logo a {
+    color: var(--first-color);
+    font-family: var(--font-logo);
+    font-weight: bold;
+    font-size: 1rem; 
+    text-decoration: none;
+}
+
 .header__container__menu__btn {
     outline: thin solid var(--second-color); /* Ese margen o linea que da el botón por defecto que sea delgado y sólido, con color */
     border: 0; /* borde por defecto */
     cursor: pointer;
-    color: var(--second-color); 
-    background-color: var(--first-color);
+    /* color */
+    background-color: var(--second-color); 
 }
 
 .header__container__menu__btn svg {
-    fill: var(--second-color); 
+    fill: var(--first-color);
 }
 
 .header__container__menu {
@@ -102,8 +133,8 @@ p {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* pointer-events: none; *//* si activamos o no la reacción a interactividad, porque por mas que la opacidad sea 0, al pasar sobre el elemento se ve la manito */
-    /* opacity: 0; */ 
+    pointer-events: none; /* si activamos o no la reacción a interactividad, porque por mas que la opacidad sea 0, al pasar sobre el elemento se ve la manito */
+    opacity: 0; 
     transition: opacity 0.5s ease; /* transicion a la opacidad con efecto de aceleración normal */
 }
 
@@ -126,9 +157,27 @@ p {
 
 /* ----------Header - Media query---------- */
 @media screen and (min-width: 1024px) {
+
+    .header {
+        /* sticky es una mezcla entre el posicionamiento relativo y el fijo, 
+        y se comportará como elemento fijo a la altura que yo lo defina,
+        y no se posiciona sobre ningun elemento */
+        position: sticky; 
+        top: 0;
+        padding: 0.5rem; 
+        height: calc(var(--header-height) - 0.5rem); /* se resta este 0.5rem al valor de la variable */
+        background-color: var(--first-color);
+    }
+
+    .header__container__logo a {
+        color: var(--second-color);
+        font-size: 1rem;
+    }
+
     .header__container__menu__btn {
         display: none;
     }
+
     .header__container__menu {
         position: static; /* vuelve a su valor normal */
         width: auto; /* se adapte al ancho que tengan los enlaces */
@@ -136,13 +185,24 @@ p {
         opacity: 1;
         pointer-events: auto;
     }
+
     .header__container__menu a {
         padding: 0 1rem;
     }
+
     .header__container__menu a:last-child {
         padding-right: 0;
-      }
+    }
+
     .header__container__menu a:hover {
         background-color: transparent;
     }
+}
+/* --- */
+.none {
+    display: none;
+}
+
+.section {
+    padding: 2rem 1rem;
 }
