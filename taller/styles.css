@@ -2,15 +2,14 @@
 :root {
     --first-color: #e1bcfe;
     color: #3a3b45;
-    color: #1c3e6b;
     color: #494e5f;
-    --second-color: #6e7692; /* este color de post, verde agua y lila */
+    --second-color: #494e5f; /* este color de post(#6e7692) es un poquito más claro, verde agua y lila */
     --black-color: #000;
     --white-color: #fff;
     --link-color: #438ccc;
     --white-alpha-color: rgba(255, 255, 255, 0.5);
     --black-alpha-color: rgba(0, 0, 0, 0.5);
-    --font: 'Zen Antique', serif;
+    --font: 'Courier Prime', monospace;
     --max-width: 1200px;
     --header-height: 4rem;
 }
@@ -39,6 +38,7 @@ body {
 a {
     color: var(--link-color);
     transition: all 0.5s ease-out;
+    font-size: 1.1rem;
 }
 
 a:hover {
@@ -82,6 +82,7 @@ img {
 
 p { 
     line-height: 1.6; /* Espacio interlineado */
+    font-size: 1rem;
 }
 
 /* ----------Header---------- */
@@ -210,6 +211,30 @@ p {
     padding: 2rem 1rem;
 }
 
+.btn { 
+    border-radius: .5rem;
+    border-top: dashed var(--white-color);
+    border-bottom: dashed var(--white-color);
+    border-left: dashed var(--white-color);
+    border-right: dashed var(--white-color);
+    padding: 1rem;
+    display: inline-block; /* las a tiene las caracteristicas de elemento en linea, le saco para mejor manejo */
+    width: 150px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.section__title {
+    border-bottom: dashed var(--second-color);
+    width: 250px;
+    margin: 2rem auto;
+    padding: .5rem 1rem;
+    text-align: center;
+    color: var(--second-color)
+}
+
 /* ----------Hero image---------- */
 .hero__image {
     background-image: var(--hero-image); 
@@ -231,7 +256,7 @@ p {
 }
 
 .hero__image--content {
-    color: var(--first-color); 
+    color: var(--white-color); 
 }
 
 .hero__image--title {
@@ -277,10 +302,10 @@ p {
     align-items: center;
 }
 
-.contact__card > svg {
+.contact__card > svg path {
     width: 2rem;
     height: 2rem;
-    fill: var(--first-color);
+    fill: var(--second-color);
 }
 
 .contact__card > small {
@@ -302,7 +327,7 @@ p {
 @media screen and (min-width: 1024px) {
 
     .contact__cards {
-        grid-template-columns: repeat(4, 24%); /* ese 4 sobrante se reparte para el espaciado en si */
+        grid-template-columns: repeat(3, 30%); 
         justify-content: space-between;
     }
  
