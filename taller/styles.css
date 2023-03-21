@@ -31,7 +31,6 @@ body {
     margin: 0 auto;
     overflow-x: hidden; /* Con lo que desborda el contenedor, en x(horizontal) que oculte y evita la barra de desplazamiento */
     color: var(--second-color);
-    background-color: var(--firts-color);
     max-width: 1440px; 
 }
 
@@ -422,3 +421,18 @@ p {
 }
 
 /* ---------end carousel--------- */
+
+/* ----------Footer---------- */
+.footer {
+    margin-bottom: var(--header-height);
+    padding: 1rem;
+    text-align: center;
+    color: var(--second-color);
+    background-color: var(--first-color);
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        margin-bottom: 0;
+    }
+}
