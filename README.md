@@ -3,8 +3,9 @@
     --- MI COSTURERITO --- 
 
     Página Web de contacto
-    Link: 
 
--> [INSTAGRAM](https://www.instagram.com/_mi_costurerito_/) <-
+-> [LINK](https://micosturerito.netlify.app/)
+
+-> [INSTAGRAM](https://www.instagram.com/_mi_costurerito_/) 
 
 ![cover](logos/cover-mc.png)
