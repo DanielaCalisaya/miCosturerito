@@ -1,4 +1,4 @@
-![logo](taller/logos/logo.png)
+![logo](logos/logo.png)
 
     --- MI COSTURERITO --- 
 
@@ -7,4 +7,4 @@
 
 -> [INSTAGRAM](https://www.instagram.com/_mi_costurerito_/) <-
 
-![cover](taller/logos/cover-mc.png)
+![cover](logos/cover-mc.png)
