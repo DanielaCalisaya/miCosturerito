@@ -396,6 +396,51 @@ p {
 
 /* ---------end carousel--------- */
 
+/* ---------section recycling--------- */
+.skills > .skills__container { /* tarjetas section skills */
+    display: grid;
+    grid-template-columns: repeat(2, 45%); /* 2 por 45, da 90, queda 10 de margen para el justify content */
+    justify-content: space-between;
+    align-content: center;
+}
+.skills .section__title { /* al titulo le decimos que ocupe las dos celdas, sino lo maneja como otra card, porque es hijo directo del div */
+    grid-column: span 2;
+}
+.skill__card {  
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;  
+}
+.skill__card .text-1{
+    background-color: rgba(0,0,0,0.7);
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: relative;
+    bottom: 6px;
+    width: auto;
+    text-align: center;
+}
+/* MEDIA QUERY - 768 px */
+@media screen and (min-width: 768px) { /* cuando el dispositivo sea pantalla y cuando la minima anchura sea 768*/
+    .skills > .skills__container {
+        grid-template-columns: repeat(3, 30%);
+    }
+    .skills .section__title { 
+        grid-column: span 3;
+    }
+}
+/* MEDIA QUERY - 1024 px */
+/* @media screen and (min-width: 1024px) {
+
+    .skills > .skills__container {
+        grid-template-columns: repeat(5, 18%); 
+    }
+    .skills .section__title { 
+        grid-column: span 5; 
+    }
+} */
+
 /* ----------Footer---------- */
 .footer {
     margin-bottom: var(--header-height);
