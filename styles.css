@@ -273,49 +273,6 @@ p {
    
 }
 
-/* ----------Contact---------- */
-.contact__card {
-    margin: 1rem auto;
-    padding: 1rem;
-    width: 100%;
-    height: 144px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.contact__card > svg path {
-    width: 2rem;
-    height: 2rem;
-    fill: var(--second-color);
-}
-
-.contact__card > small {
-    margin-top: -1rem;
-}
-
-/* ----------Contact - Media query---------- */
-@media screen and (min-width: 768px) { /* cuando el dispositivo sea pantalla y cuando la minima anchura sea 768*/
-
-    .contact__cards {
-        display: grid;
-        grid-template-columns: repeat(2, 48%);
-        justify-content: space-between;
-    }
-
-}
-
-/* ----------Contact - Media query---------- */
-@media screen and (min-width: 1024px) {
-
-    .contact__cards {
-        grid-template-columns: repeat(3, 30%); 
-        justify-content: space-between;
-    }
- 
-}
-
 /* ----------Carousel---------- */
 
 /* Slideshow container */
@@ -396,22 +353,22 @@ p {
 
 /* ---------end carousel--------- */
 
-/* ---------section recycling--------- */
-.skills > .skills__container { /* tarjetas section skills */
+/* ---------Recycled--------- */
+.recycled > .recycled__container { /* tarjetas section recicled */
     display: grid;
     grid-template-columns: repeat(2, 45%); /* 2 por 45, da 90, queda 10 de margen para el justify content */
     justify-content: space-between;
     align-content: center;
 }
-.skills .section__title { /* al titulo le decimos que ocupe las dos celdas, sino lo maneja como otra card, porque es hijo directo del div */
+.recycled .section__title { /* al titulo le decimos que ocupe las dos celdas, sino lo maneja como otra card, porque es hijo directo del div */
     grid-column: span 2;
 }
-.skill__card {  
+.recycling__card {  
     margin: 1rem auto;
     padding: 1rem;
     text-align: center;  
 }
-.skill__card .text-1{
+.recycling__card .text-1{
     background-color: rgba(0,0,0,0.7);
     color: #f2f2f2;
     font-size: 15px;
@@ -423,23 +380,66 @@ p {
 }
 /* MEDIA QUERY - 768 px */
 @media screen and (min-width: 768px) { /* cuando el dispositivo sea pantalla y cuando la minima anchura sea 768*/
-    .skills > .skills__container {
+    .recycled > .recycled__container {
         grid-template-columns: repeat(3, 30%);
     }
-    .skills .section__title { 
+    .recycled .section__title { 
         grid-column: span 3;
     }
 }
 /* MEDIA QUERY - 1024 px */
 /* @media screen and (min-width: 1024px) {
 
-    .skills > .skills__container {
+    .recycled > .recycled__container {
         grid-template-columns: repeat(5, 18%); 
     }
-    .skills .section__title { 
+    .recycled .section__title { 
         grid-column: span 5; 
     }
 } */
+
+/* ----------Contact---------- */
+.contact__card {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact__card > svg path {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--second-color);
+}
+
+.contact__card > small {
+    margin-top: -1rem;
+}
+
+/* ----------Contact - Media query---------- */
+@media screen and (min-width: 768px) { /* cuando el dispositivo sea pantalla y cuando la minima anchura sea 768*/
+
+    .contact__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        justify-content: space-between;
+    }
+
+}
+
+/* ----------Contact - Media query---------- */
+@media screen and (min-width: 1024px) {
+
+    .contact__cards {
+        grid-template-columns: repeat(3, 30%); 
+        justify-content: space-between;
+    }
+ 
+}
 
 /* ----------Footer---------- */
 .footer {
